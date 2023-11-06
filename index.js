@@ -6,6 +6,7 @@ app.use(express.json())
 
 
 app.get("/",(req,res)=>{
+    console.log(123456)
     res.send("Hello World")
 })
 
