@@ -26,6 +26,6 @@ console.log('Server starting...');
 app.get('/',(req, res) => {
     console.log('Request received...');
     res.end('Hello GCP dev! in theena complete task-1');
-}).listen(8001, () => {
+}).listen(8000, () => {
     console.log('started.');
 });
