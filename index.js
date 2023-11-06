@@ -1,21 +1,31 @@
-const express = require("express")
-const app = express()
-const port = 8001
+// const express = require("express")
+// const app = express()
+// const port = 8001
 
-app.use(express.json())
+// app.use(express.json())
 
 
-app.get("/",(req,res)=>{
-    console.log(123456)
-    res.send("Hello World")
-})
+// app.get("/",(req,res)=>{
+//     console.log(123456)
+//     res.send("Hello World")
+// })
 
-//changes accept
+// //changes accept
 
-app.listen(port,(err)=>{
-    if(err){
-        console.log(err)
-    }else{
-        console.log(`Server is running on port ${port}`)
-    }
-})
+// app.listen(port,(err)=>{
+//     if(err){
+//         console.log(err)
+//     }else{
+//         console.log(`Server is running on port ${port}`)
+//     }
+// })
+
+
+const http = require('http');
+console.log('Server starting...');
+http.createServer((req, res) => {
+    console.log('Request received...');
+    res.end('Hello GCP dev!');
+}).listen(80, () => {
+    console.log('started.');
+});
